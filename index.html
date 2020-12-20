@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script defer src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script defer src="main.js"></script>
+    <title>Fancy Weather</title>
+  </head>
+  <body>
+    
+   
+    <div class="header">
+      <div class="header__buttons-panel">
+        <button class="header__buttons--refresh"></button>
+        <select
+          name="language"
+          id="language"
+          class="header__buttons--language">
+          <option value="en">EN</option>
+          <option value="ru">RU</option>
+        </select>
+        <form>
+          <div class="header__radio-group">
+            
+            <label for="farenheit">
+              <input
+              class="header__input-radio--farenheit"
+              type="radio"
+              id="farenheit"
+              name="selector"
+              value="farenheit"
+              checked>
+              <span class="header__input-radio--text">F&deg</span>
+            </label>
+            <label for="celsius">
+              <input
+              class="header__input-radio--celsius"
+              type="radio"
+              id="celsius"
+              name="selector"
+              value="celsius"
+            /><span class="header__input-radio--text">C&deg</span>
+          </label>
+          </div>
+        </form>
+      </div>
+      <div class="header__search">
+        <div class="header__search--input">
+          <input
+            type="text"
+            class="header__search--form"
+            placeholder="Search city or ZIP">
+          <div>
+            <button class="header__search-voice-button" id="search-voice-button"><img src="assets/icons/mic.png" class="img__voice-button" alt="Voice icon"></button>
+            <button class="header__search-button" id="search-button">Search</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="location-date">
+      <p class="location-date__city">Minsk, Belarus</p>
+      <p class="location-date__date">Mon 28 October 17:23</p>
+    </div>
+
+
+
+    <div class="main">
+      <div class="weather">
+        <div class="weather__current">
+          <p class="weather__current--temperature">10<span class="weather__current--temperature-deg">&#176</span></p>
+          <div class="weather__current--info">
+            <img class="weather__current--icon" src="assets/icons/cloud.png" alt="Cloud">
+            <div class="weather__current--details">
+              <p class="details__clouds">OVERCAST</p>
+              <p class="details__feels">FEELS LIKE: 7&#176;</p>
+              <p class="details__wind">WIND: 2 m/s</p>
+              <p class="details__humidity">HUMIDITY: 83%</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="weather__forecast">
+          <div class="forecast">              
+            <p class="weather__forecast--day">Tuesday</p>              
+            <div class="weather__forecast--info">
+              <p class="weather__forecast--temperature">7&#176;</p>
+              <img class="weather__forecast--icon" src="assets/icons/cloud.png" alt="Cloud">
+            </div>
+          </div>
+
+          <div class="forecast">
+              <p class="weather__forecast--day">Wednesday</p>
+              <div class="weather__forecast--info">
+                <p class="weather__forecast--temperature">6&#176;</p>
+                <img class="weather__forecast--icon" src="assets/icons/sun_cloud.png" alt="Sun Cloud">
+              </div>
+          </div>
+
+          <div class="forecast">
+              <p class="weather__forecast--day">Thursday</p>
+              <div class="weather__forecast--info">
+                <p class="weather__forecast--temperature">10&#176;</p>
+                <img class="weather__forecast--icon" src="assets/icons/sun_cloud.png" alt="Sun Cloud">
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <div class="map__map">       
+      <div class="angle"><div id='map'></div></div>
+        <div class="map__latlng">
+          <p class="lat">Latitude: 50°54'</p>
+          <p class="lng">Longitude: 55°05'</p>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
