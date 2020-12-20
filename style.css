@@ -282,11 +282,21 @@ body {
 
 
 
+/*MAP AREA*/
 
-
+.map-area {
+  display: flex;
+  flex-direction: column;
+  display: inline-block;
+}
 
 .map__latlng {
   text-align: right;
+}
+
+.map-area__angle {
+  border-radius: 3rem 3rem 0 10rem;
+  overflow: hidden;
 }
 
 #map {
@@ -295,18 +305,7 @@ body {
   clip-path: polygon(0% 0%, 100% 0, 100% 86%, 100% 100%, 91% 94%, 0 94%);
 }
 
-.angle {
-  border-radius: 3rem 3rem 0 10rem;
-  overflow: hidden;
-}
-
-.map__map {
-  display: flex;
-  flex-direction: column;
-  display: inline-block;
-}
-
-.map__latlng {
+.map-area__latlng {
   font-weight: 600;
   font-size: 20px;
   line-height: 30px;
