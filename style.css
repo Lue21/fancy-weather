@@ -46,6 +46,8 @@ body {
   display: flex;
   position: relative;
   width: 37.5rem;
+  caret-color: #fff;
+  
 }
 
 .header__search--form {
@@ -55,8 +57,13 @@ body {
   outline: none;
   border: 1px solid rgba(228, 227, 227, 0.2);
   background: rgba(76, 82, 85, 0.4);
+  color: #fff;
   padding: 1rem;
   border-radius: 5px 0 0 5px;
+}
+
+::placeholder {
+  color: #fff;
 }
 
 .header__search-button {
@@ -76,6 +83,7 @@ body {
   padding: 1rem;
   position: absolute;
   right: 0;
+  cursor: pointer;
 }
 
 .header__search-voice-button {
@@ -87,6 +95,8 @@ body {
   background: rgba(76, 82, 85, 0);
   border: none;
   outline: none;
+  cursor: pointer;
+
 }
 
 /*RADIO CHECKED*/
@@ -104,6 +114,7 @@ body {
   -webkit-appearance: none;
   -moz-appearance: none;
   border-radius: 5px 0 0 5px;
+  cursor: pointer;
 }
 
 .header__input-radio--celsius {
@@ -114,6 +125,7 @@ body {
   -webkit-appearance: none;
   -moz-appearance: none;
   border-radius: 0 5px 5px 0;
+  cursor: pointer;
 }
 
 .header__input-radio--farenheit:focus {
@@ -147,6 +159,7 @@ body {
 .header__input-radio--text {
   position: relative;
   top: -30px;
+  cursor: pointer;
 }
 
 .header__input-radio--text:first-of-type {
@@ -173,6 +186,7 @@ body {
   line-height: 17px;
   text-transform: uppercase;
   color: #fff;
+  cursor: pointer;
 }
 
 /*REFRESH BG*/
@@ -186,6 +200,7 @@ body {
   outline: none;
   background-color: rgba(180, 184, 187, 0.4);
   background-image: url(assets/icons/RefreshBG.png);
+  cursor: pointer;
 }
 
 
@@ -290,19 +305,16 @@ body {
   display: inline-block;
 }
 
-.map__latlng {
-  text-align: right;
-}
-
 .map-area__angle {
-  border-radius: 3rem 3rem 0 10rem;
+  border-radius: 3rem;
   overflow: hidden;
+  mask-image: url('assets/2b3af71ab999c03c865f52d6e386871c.svg');
+
 }
 
 #map {
   width: 37rem;
-  height: 40rem;
-  clip-path: polygon(0% 0%, 100% 0, 100% 86%, 100% 100%, 91% 94%, 0 94%);
+  height: 43rem;
 }
 
 .map-area__latlng {
@@ -314,3 +326,4 @@ body {
   color: #ffffff;
   padding-top: 1rem;
 }
+
