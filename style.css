@@ -216,8 +216,13 @@ body {
 .location-date__date {
   font-size: 2.4rem;
   font-weight: 600;
+  display: inline-block;
+  padding-right: 1rem;
 }
-
+.location-time {
+  font-size: 2.4rem;
+  font-weight: 600;
+}
 
 
 /*CURRENT WEATHER*/
@@ -262,7 +267,9 @@ body {
   max-width: 16.5rem;
 }
 
-
+.details__clouds {
+  text-transform: uppercase;
+}
 
 /*WEATHER FORECAST*/
 
@@ -270,12 +277,26 @@ body {
   display: flex;
 }
 
-.weather__forecast--day {
+.weather__forecast--day-1 {
+  font-size: 2.2rem;
+  padding: 1rem;
+}
+.weather__forecast--day-2 {
+  font-size: 2.2rem;
+  padding: 1rem;
+}
+.weather__forecast--day-3 {
   font-size: 2.2rem;
   padding: 1rem;
 }
 
-.weather__forecast--temperature {
+.weather__forecast--temperature-1 {
+  font-size: 8rem;
+}
+.weather__forecast--temperature-2 {
+  font-size: 8rem;
+}
+.weather__forecast--temperature-3 {
   font-size: 8rem;
 }
 
@@ -289,10 +310,19 @@ body {
   display: flex;
 }
 
-.weather__forecast--icon {
+.weather__forecast--icon-1 {
   width: 6.6rem;
   height: 4.1rem;
 }
+.weather__forecast--icon-2 {
+  width: 6.6rem;
+  height: 4.1rem;
+}
+.weather__forecast--icon-3 {
+  width: 6.6rem;
+  height: 4.1rem;
+}
+
 
 
 

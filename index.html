@@ -6,8 +6,6 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">  
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-    <script defer src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script defer src="main.js"></script>
     <title>Fancy Weather App</title>
   </head>
@@ -34,7 +32,7 @@
               id="farenheit"
               name="selector"
               value="farenheit"
-              checked>
+              >
               <span class="header__input-radio--text">F&deg</span>
             </label>
             <label for="celsius">
@@ -44,6 +42,7 @@
               id="celsius"
               name="selector"
               value="celsius"
+              checked
             /><span class="header__input-radio--text">C&deg</span>
           </label>
           </div>
@@ -67,7 +66,7 @@
 
     <div class="location-date">
       <p class="location-date__city">Minsk, Belarus</p>
-      <p class="location-date__date">Mon 28 October 17:23</p>
+      <p class="location-date__date">Mon 28 October</p><span class="location-time">17:23</span>
     </div>
 
 
@@ -77,7 +76,7 @@
         <div class="weather__current">
           <p class="weather__current--temperature">10<span class="weather__current--temperature-deg">&#176</span></p>
           <div class="weather__current--info">
-            <img class="weather__current--icon" src="assets/icons/cloud.png" alt="Cloud">
+            <div class="weather__current--icon"></div>
             <div class="weather__current--details">
               <p class="details__clouds">OVERCAST</p>
               <p class="details__feels">FEELS LIKE: 7&#176;</p>
@@ -89,26 +88,26 @@
 
         <div class="weather__forecast">
           <div class="forecast">              
-            <p class="weather__forecast--day">Tuesday</p>              
+            <p class="weather__forecast--day-1">Tuesday</p>              
             <div class="weather__forecast--info">
-              <p class="weather__forecast--temperature">7&#176;</p>
-              <img class="weather__forecast--icon" src="assets/icons/cloud.png" alt="Cloud">
+              <p class="weather__forecast--temperature-1">7&#176;</p>
+              <div class="weather__forecast--icon-1"><img src="assets/icons/cloud.png" alt="Cloud"></div>
             </div>
           </div>
 
           <div class="forecast">
-              <p class="weather__forecast--day">Wednesday</p>
+              <p class="weather__forecast--day-2">Wednesday</p>
               <div class="weather__forecast--info">
-                <p class="weather__forecast--temperature">6&#176;</p>
-                <img class="weather__forecast--icon" src="assets/icons/sun_cloud.png" alt="Sun Cloud">
+                <p class="weather__forecast--temperature-2">6&#176;</p>
+                <div class="weather__forecast--icon-2"><img src="assets/icons/sun_cloud.png" alt="Sun Cloud"></div>
               </div>
           </div>
 
           <div class="forecast">
-              <p class="weather__forecast--day">Thursday</p>
+              <p class="weather__forecast--day-3">Thursday</p>
               <div class="weather__forecast--info">
-                <p class="weather__forecast--temperature">10&#176;</p>
-                <img class="weather__forecast--icon" src="assets/icons/sun_cloud.png" alt="Sun Cloud">
+                <p class="weather__forecast--temperature-3">10&#176;</p>
+                <div class="weather__forecast--icon-3"><img src="assets/icons/sun_cloud.png" alt="Sun Cloud"></div>
               </div>
           </div>
         </div>
