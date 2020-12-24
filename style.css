@@ -22,6 +22,7 @@ body {
     ),
     url(assets/backgrounds/bg3.jpg);
     background-size: cover;  
+    transition: background .30s linear;
 }
 
 .header {
@@ -318,7 +319,7 @@ body {
   width: 6.6rem;
   height: 4.1rem;
 }
-.weather__forecast--icon-3 {
+.weather__forecast--icon- {
   width: 6.6rem;
   height: 4.1rem;
 }
