@@ -9,14 +9,19 @@
     
     <script defer src='https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.css' rel='stylesheet' />
-    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"></script>
+    <script defer src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"></script>
     <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.css" type="text/css"/>
 
-    <script defer src="main2.js"></script>
+    <script defer src="main.js"></script>
     <title>Fancy Weather App</title>
   </head>
   <body>
-    
+    <div class="preloader">
+      <div class="preloader__row">
+        <div class="preloader__item"></div>
+        <div class="preloader__item"></div>
+      </div>
+    </div>
    
     <div class="header">
       <div class="header__buttons-panel">
@@ -25,8 +30,8 @@
           name="language"
           id="language"
           class="header__buttons--language">
-          <option value="en">EN</option>
-          <option value="ru">RU</option>
+          <option value="en"><a href='#eng' data-reload>EN</a></option>
+          <option value="ru"><a href='#ru' data-reload>RU</a></option>
         </select>
         <form>
           <div class="header__radio-group">
@@ -45,10 +50,10 @@
               <input
               class="header__input-radio--celsius"
               type="radio"
-              id="celsius"
-              name="selector"
-              value="celsius"
-              checked
+              id ="celsius"
+              name ="selector"
+              value ="celsius"
+              checked = 'checked'
             /><span class="header__input-radio--text">C&deg</span>
           </label>
           </div>
@@ -62,7 +67,7 @@
             placeholder="Search city or ZIP">
           <div>
             <button class="header__search-voice-button" id="search-voice-button"><img src="assets/icons/mic.png" class="img__voice-button" alt="Voice icon"></button>
-            <button class="header__search-button" id="search-button">Search</button>
+            <button class="header__search-button translate id="search-button">Search</button>
           </div>
         </div>
       </div>
@@ -71,8 +76,8 @@
 
 
     <div class="location-date">
-      <p class="location-date__city">Minsk, Belarus</p>
-      <p class="location-date__date">Mon 28 October</p><span class="location-time">17:23</span>
+      <p class="location-date__city"></p>
+      <p class="location-date__date"></p><span class="location-time"></span>
     </div>
 
 
@@ -80,7 +85,7 @@
     <div class="main">
       <div class="weather">
         <div class="weather__current">
-          <p class="weather__current--temperature">10<span class="weather__current--temperature-deg">&#176</span></p>
+          <div class="weather__current--temperature"></div><div class="weather__current--temperature-deg">&#176</div>
           <div class="weather__current--info">
             <div class="weather__current--icon"></div>
             <div class="weather__current--details">
@@ -94,25 +99,25 @@
 
         <div class="weather__forecast">
           <div class="forecast">              
-            <p class="weather__forecast--day-1">Tuesday</p>              
+            <p class="weather__forecast--day-1"></p>              
             <div class="weather__forecast--info">
-              <p class="weather__forecast--temperature-1">7&#176;</p>
+              <p class="weather__forecast--temperature-1">&#176;</p>
               <div class="weather__forecast--icon-1"><img src="assets/icons/cloud.png" alt="Cloud"></div>
             </div>
           </div>
 
           <div class="forecast">
-              <p class="weather__forecast--day-2">Wednesday</p>
+              <p class="weather__forecast--day-2"></p>
               <div class="weather__forecast--info">
-                <p class="weather__forecast--temperature-2">6&#176;</p>
+                <p class="weather__forecast--temperature-2">&#176;</p>
                 <div class="weather__forecast--icon-2"><img src="assets/icons/sun_cloud.png" alt="Sun Cloud"></div>
               </div>
           </div>
 
           <div class="forecast">
-              <p class="weather__forecast--day-3">Thursday</p>
+              <p class="weather__forecast--day-3"></p>
               <div class="weather__forecast--info">
-                <p class="weather__forecast--temperature-3">10&#176;</p>
+                <p class="weather__forecast--temperature-3">&#176;</p>
                 <div class="weather__forecast--icon-3"><img src="assets/icons/sun_cloud.png" alt="Sun Cloud"></div>
               </div>
           </div>
