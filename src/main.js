@@ -33,7 +33,7 @@ let now = new Date(),
   mapLatitude,
   mapLongitude;
 
-//-preloader-//
+
 window.onload = function () {
   if (localStorage.getItem('lang') === null) {
     localStorage.setItem('lang', 'en');
