@@ -20,7 +20,7 @@ body {
       180deg,
       rgba(8, 15, 26, 0.59) 0%,
       rgba(58, 58, 129, 0.46) 100%
-    ), url(../assets/backgrounds/bg3.jpg);
+    ), url(assets/backgrounds/bg3.jpg);
   background-size: cover;
   -webkit-animation:  fade-in 1s linear; 
   -moz-animation: fade-in 1s linear; 

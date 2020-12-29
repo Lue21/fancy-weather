@@ -199,17 +199,17 @@ function getWeather(locationCity, lang) {
       }
 
       currentTempIcon.innerHTML =
-        `<img src="../assets/icons/${data.list[0].weather[0].icon}.svg">`;
+        `<img src="assets/icons/${data.list[0].weather[0].icon}.svg">`;
       currentWeatherDetails.textContent = data.list[0].weather[0].description;
       currentWeatherWind.textContent = `${data.list[0].wind.speed} m/s`;
       currentWeatherHumidity.textContent =
         `${data.list[0].main.humidity} %`;
       forecastIcon1.innerHTML =
-        `<img src="../assets/icons/${data.list[5].weather[0].icon}.svg">`;
+        `<img src="assets/icons/${data.list[5].weather[0].icon}.svg">`;
       forecastIcon2.innerHTML =
-        `<img src="../assets/icons/${data.list[13].weather[0].icon}.svg">`;
+        `<img src="assets/icons/${data.list[13].weather[0].icon}.svg">`;
       forecastIcon3.innerHTML =
-        `<img src="../assets/icons/${data.list[21].weather[0].icon}.svg">`;
+        `<img src="assets/icons/${data.list[21].weather[0].icon}.svg">`;
 
       mapLatitude = data.city.coord.lat.toFixed(2);
       mapLongitude = data.city.coord.lon.toFixed(2);
@@ -379,7 +379,7 @@ function changeLanguage() {
     searchInput.placeholder = "Название города";
     document.querySelector('.latitude').innerHTML = 'Широта:';
     document.querySelector('.longitude').innerHTML = 'Долгота:';
-    document.querySelector('.feels').textContent = 'ПОХОЖЕ НА:';
+    document.querySelector('.feels').textContent = 'ОЩУЩАЕТСЯ:';
     document.querySelector('.wind').textContent = 'ВЕТЕР: ';
     document.querySelector('.humidity').textContent = 'ВЛАЖНОСТЬ: ';
     
