@@ -323,7 +323,7 @@ background-color: rgba(89, 114, 129, 0.4);
   border: none;
   outline: none;
   background-color: rgba(180, 184, 187, 0.4);
-  background-image: url(../assets/icons/RefreshBG.png);
+  background-image: url(assets/icons/RefreshBG.png);
   cursor: pointer;
   transition: .3s;
 }
