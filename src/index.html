@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">  
+    
+    <script defer src='https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.css' rel='stylesheet' />
+    <script defer src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"></script>
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.css" type="text/css"/>
+
+    <script defer src="main.js"></script>
+    <title>Fancy Weather App</title>
+  </head>
+  <body>
+    <div class="preloader">
+      <div class="preloader__row">
+        <div class="preloader__item"></div>
+        <div class="preloader__item"></div>
+      </div>
+    </div>
+   
+    <div class="header">
+      <div class="header__buttons-panel">
+        <button class="header__buttons--refresh"></button>
+
+        <button class="header__buttons--enLanguage">EN</button>
+        <button class="header__buttons--ruLanguage">RU</button>
+
+        <form>
+          <div class="header__radio-group">
+            
+            <label for="farenheit">
+              <input
+              class="header__input-radio--farenheit"
+              type="radio"
+              id="farenheit"
+              name="selector"
+              value="farenheit"
+              >
+              <span class="header__input-radio--text">F&deg</span>
+            </label>
+            <label for="celsius">
+              <input
+              class="header__input-radio--celsius"
+              type="radio"
+              id ="celsius"
+              name ="selector"
+              value ="celsius"
+              checked = 'checked'
+            /><span class="header__input-radio--text">C&deg</span>
+          </label>
+          </div>
+        </form>
+      </div>
+      <div class="header__search">
+        <div class="header__search--input">
+          <input
+            type="text"
+            class="header__search--form"
+            placeholder="Search city or ZIP">
+          <div>
+            <!-- <button class="header__search-voice-button" id="search-voice-button"><img src="../assets/icons/mic.png" class="img__voice-button" alt="Voice icon"></button> -->
+            <button class="header__search-button translate id="search-button">Search</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="location-date">
+      <p class="location-date__city"></p>
+      <p class="location-date__date"></p><span class="location-time"></span>
+    </div>
+
+
+
+    <div class="main">
+      <div class="weather">
+        <div class="weather__current">
+          <div class="weather__current--temperature"></div><div class="weather__current--temperature-deg">&#176</div>
+          <div class="weather__current--info">
+            <div class="weather__current--icon"></div>
+            <div class="weather__current--details">
+              <p class="details__clouds"></p>
+              <div class="row"><p class="feels"></p>&nbsp;	<p class="details__feels"></p></div>
+              <div class="row"><p class="wind"></p>&nbsp;	<p class="details__wind"></p></div>
+              <div class="row"><p class="humidity"></p>&nbsp;	<p class="details__humidity"></p></div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="weather__forecast">
+          <div class="forecast">              
+            <p class="weather__forecast--day-1"></p>              
+            <div class="weather__forecast--info">
+              <p class="weather__forecast--temperature-1"></p>
+              <div class="weather__forecast--icon-1"></div>
+            </div>
+          </div>
+
+          <div class="forecast">
+              <p class="weather__forecast--day-2"></p>
+              <div class="weather__forecast--info">
+                <p class="weather__forecast--temperature-2"></p>
+                <div class="weather__forecast--icon-2"></div>
+              </div>
+          </div>
+
+          <div class="forecast">
+              <p class="weather__forecast--day-3"></p>
+              <div class="weather__forecast--info">
+                <p class="weather__forecast--temperature-3"></p>
+                <div class="weather__forecast--icon-3"></div>
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="map-area">       
+        <div class="map-area__angle">
+          <div id='map'></div>
+        </div>
+        <div class="map-area__latlng">
+          <div class="row"><p class="latitude"></p>&nbsp;	<p class="map-area__lat"></p></div>
+          <div class="row"><p class="longitude"></p>&nbsp;	<p class="map-area__lng"></p></div>
+          <!-- <button class="where">Where I'am</button> -->
+          
+         
+        </div>
+      </div>
+
+    </div>
+
+  </body>
+</html>
